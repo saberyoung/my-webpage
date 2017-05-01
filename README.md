@@ -3,7 +3,7 @@
 
 A [Kenneth Reitz](http://kennethreitz.org/) Project.
 
-#![ice cream](https://gracedb.ligo.org/apiweb/events/G184098/files/LIB_skymap.png,1)
+![ice cream](https://gracedb.ligo.org/apiweb/events/G184098/files/LIB_skymap.png,1)
 
 See http://httpbin.org for more information.
 
