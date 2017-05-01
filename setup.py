@@ -12,14 +12,14 @@ setup(
     long_description=long_description,
 
     # The project URL.
-    url='https://github.com/kennethreitz/httpbin',
+    url='https://github.com/saberyoung/my-webpage/',
 
     # Author details
-    author='Kenneth Reitz',
-    author_email='me@kennethreitz.org',
+    author='Sheng Yang',
+    author_email='saberyoung@gmail.com',
 
     # Choose your license
-    license='MIT',
+    license='',
 
     classifiers=[
          'Development Status :: 5 - Production/Stable',
