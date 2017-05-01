@@ -3,7 +3,7 @@
 
 A [Kenneth Reitz](http://kennethreitz.org/) Project.
 
-![ice cream](http://photo.renren.com/photo/264276605/album-280566819/v7#photo/264276605/1899603294)
+![ice cream](https://thumbs.dreamstime.com/z/supernova-heart-nebula-shape-planets-stars-60306991.jpg)
 
 See http://httpbin.org for more information.
 
