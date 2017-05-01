@@ -1,11 +1,11 @@
-# httpbin(1): HTTP Request & Response Service
+# syang_web: My trial version of website for me and my involved projects
 
 
-A [Kenneth Reitz](http://kennethreitz.org/) Project.
+A [Sheng Yang](http://shengyang.com/) Project.
 
-![ice cream](https://sd.keepcalm-o-matic.co.uk/i/keep-calm-and-love-astronomy-65.png)
+![astronomy](https://sd.keepcalm-o-matic.co.uk/i/keep-calm-and-love-astronomy-65.png)
 
-See http://httpbin.org for more information.
+See http://shengyang.com for more information.
 
 ## Officially Deployed at:
 
