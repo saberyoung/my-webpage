@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DLT40</title>
+
+    <!-- Bootstrap -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- In-lining styles to avoid needing a separate .css file -->
+    <style>
+        hr { border-color: #cccccc; margin: 0; }
+        .no-margins { margin: 0px; }
+        .with-margins { margin: 10px; }
+        .col-centered { float: none; margin: 0 auto; }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <![endif]-->
+  </head>
+  
+<body>
+
+  <p>This is a paragraph.</p>
+
+  <form>
+    <label for="male">Male</label>
+    <input type="radio" name="sex" id="male" />
+    <br />
+    <label for="female">Female</label>
+    <input type="radio" name="sex" id="female" />
+  </form>
+  
+  <script type="text/javascript">
+    document.write("Hello World!")
+  </script>
+
+  <img src="Users/sheng.yang/ownCloud/grawita/gw_sy/plot_184098/test_img/1.png" width="300" height="120" />
+  
+  <a href="https://apod.nasa.gov/apod/astropix.html">
+    <img src={{ url_for('static', filename='img/pdlogo.png') }} width="300" height="120" />
+  </a>
+    
+  <a href="https://nba.hupu.com/">
+    <h1>HoopChina</h1> </a>
+
+  <p>
+    <a href="#C4">查看 Chapter 4。</a>
+  </p>
+
+  <a href="/login"
+     target="_top">login</a> 
+
+
+  {% block body %}
+  <div <h2>Chapter 1</h2>
+       <div <p>yang sheng</p>
+	    <p>saber young</p>
+            <p>sngyang</p></div>
+
+       <div <h2>Chapter 2</h2>
+           <p>This chapter explains ba bla bla</p></div>
+
+       <div <h2>Chapter 3</h2>
+	    <p>This chapter explains ba bla bla</p></div>
+
+       <div <h2><a name="C4">Chapter 4</a></h2>
+	    <p>This chapter explains ba bla bla</p></div>
+   </div>
+
+
+
+  
+    <address>
+    Written by <a href="mailto:sngyang@ucdavis.edu">Sheng Yang</a>.<br> 
+    Visit me at: UC village, albany<br>
+    Box 578, CA<br>
+    USA
+  </address>
+  {% endblock %}
+</body>
+</html>

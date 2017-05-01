@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<script src="static/js/binaryajax.js"></script>
+<script src="static/js/excanvas.js"></script>
+<script src="static/js/jquery-1.6.min.js"></script>
+<script src="static/js/fits.js"></script>
+<script src="static/js/fitsviewer.js"></script>
+<script type="text/javascript">
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript">
+  var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+</script>
+<html>
+  <head>
+    <title>Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <style> 
+      input[type=text] {
+      width: 130px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      background-color: white;
+      background-image: url('searchicon.png');
+      background-position: 10px 10px; 
+      background-repeat: no-repeat;
+      padding: 12px 20px 12px 40px;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
+      }
+      input[type=text]:focus {
+      width: 100%;
+      }
+
+      div.relative1 {
+      position: relative;
+      left: 150px;
+     
+      }
+</style>
+    </style>
+        
+  </head>
+  <body>
+   <header>
+    <div class="container">
+      <h1 class="logo">Sheng Yang</h1>
+      <nav>
+        <ul class="menu">
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('contact') }}">Contact</a></li>
+	  <li><a href="{{ url_for('aboutme') }}">About me</a></li>
+          {% if call_or_get(current_user.is_authenticated) %}
+	  <li><a href="/dlt40" target="_top">Dlt40</a></li>
+	  <li><a href="/grawita" target="_top">Grawita</a></li>
+	  <li><a href="{{ url_for('myaccount') }}">My account</a></li>
+          <li><a href="{{ url_for('user.logout') }}">Sign Out</a></li>
+          {% else %}
+          <li><a href="{{ url_for('user.register') }}">Sign Up</a></li>
+          <li><a href="{{ url_for('user.login') }}">Sign In</a></li>
+          {% endif %}
+        </ul>
+      </nav>
+    </div>
+   </header>
+
+   <div class="relative1">
+   <form>
+     <input type="text" name="search" placeholder="Search..">
+   </form></div>
+
+   <div class="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+  <script type=text/javascript src="{{
+  url_for('static', filename='js/jquery.js') }}"></script>
+  </body>
+</html>
+

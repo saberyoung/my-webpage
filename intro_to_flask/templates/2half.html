@@ -1,0 +1,181 @@
+{% extends "layout.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<body class="w3-content" style="max-width:1300px">
+
+<!-- First Grid: Logo & About -->
+<div class="w3-row">
+  <div class="w3-half w3-black w3-container w3-center" style="height:700px">
+    <div class="w3-padding-64">
+      <img src={{ url_for('static', filename='img/logo.png') }} />
+    </div>
+    <div class="w3-padding-64">
+      <a href="#" class="w3-button w3-black w3-block w3-hover-blue-grey w3-padding-16">Home</a>
+      <a href="#work" class="w3-button w3-black w3-block w3-hover-teal w3-padding-16">My Work</a>
+      <a href="#work" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">Resume</a>
+      <a href="#contact" class="w3-button w3-black w3-block w3-hover-brown w3-padding-16">On the Web</a>
+      <a href="#contact" class="w3-button w3-black w3-block w3-hover-brown w3-padding-16">Contact</a>
+    </div>
+  </div>
+  <div class="w3-half w3-blue-grey w3-container" style="height:700px">
+    <div class="w3-padding-64 w3-center">
+      <h1>About Me</h1>
+      <img src={{ url_for('static', filename='img/id.jpg') }} class="w3-margin w3-circle" alt="Person" style="width:30%">
+      <div class="w3-left-align w3-padding-large">
+        <p>PHD at the University of Padova in the Department of Astronomy</p>
+        <p>Joint PHD in the observatory of Padova</p>
+	<p>Visiting sholar at UC Davis in the Department of Astronomy</p>
+	<p>My research interests lie in computer science techniques to the investigations of transients while I joined in Grawita project(Italy) and DLT40 project(US)</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid: Work & Resume -->
+<div class="w3-row">
+  <div class="w3-half w3-light-grey w3-center" style="min-height:800px" id="work">
+    <div class="w3-padding-64">
+      <h2>My Work</h2>
+      <p>Some of my latest projects.</p>
+    </div>
+    <div class="w3-row">
+      <div class="w3-half">
+        <img src={{ url_for('static', filename='img/grawita/logo.jpg') }} style="width:100%">
+      </div>
+      <div class="w3-half">
+        <img src={{ url_for('static', filename='img/dlt40/logo.png') }} style="width:100%">
+      </div>
+    </div>
+    <div class="w3-row w3-hide-small">
+      <div class="w3-half">
+	<h7>
+	<a href="http://adsabs.harvard.edu/cgi-bin/bib_query?arXiv:1612.03275" target="_blank">Optical photometry and spectroscopy of the low-luminosity, broad-lined Ic supernova iPTF15dld</a>
+	<br><br><br>
+	<a href="10.3847/2041-8205/826/1/L13" target="_blank">Localization and Broadband Follow-up of the Gravitational-wave Transient GW150914</a>
+	<br><br><br>
+	<a href="10.3847/0067-0049/225/1/8" target="_blank">Supplement: Localization and Broadband Follow-up of the Gravitational-wave Transient GW150914</a>
+	<br><br><br>
+	Grawita on GW150914 and GW151226 paper(in preparation)
+	</h7>
+      </div>
+      <div class="w3-half">
+        <a href="https://www.dropbox.com/home/DLT40_all/papers/DLT40LIGO"  target="_blank">DLT40-LIGO paper(in preparation)</a>
+      </div>
+    </div>
+
+    <div class="w3-row w3-hide-small">
+      <div class="w3-half">
+       
+      </div>
+      <div class="w3-half">
+       
+      </div>
+    </div><br>
+  </div>
+  <div class="w3-half w3-indigo w3-container" style="min-height:800px">
+    <div class="w3-padding-64 w3-center">
+      <h2>Resume</h2>
+      <p><a href="/aboutme/cv" target="_blank">A draft from my CV</a></p>
+      <div class="w3-container w3-responsive">
+        <table class="w3-table">
+          <tr>
+            <th>When</th>
+            <th>How</th>
+            <th>Where</th>
+          </tr>
+          <tr class="w3-white">
+            <td>10/2016 - Present</td>
+            <td>Searching for the electromagnetic counterpart of gravitational wave sources - based on dlt40</td>
+            <td>Department of Physics, University of California Davis, CA, US</td>
+          </tr>
+          <tr>
+            <td>10/2015 - Present</td>
+            <td>Searching for the electromagnetic counterpart of gravitational wave sources - based on grawita</td>
+            <td>Observatory of Padova, Padova, Italy</td>
+          </tr>
+          <tr class="w3-white">
+            <td>10/2013 - 10/2015</td>
+            <td>Remove the systematics for large scale structure survey and the improvement of restrictions on PNG<br>
+	    Constraining neutrino properties with a Euclid-like galaxy cluster survey}</td>
+            <td>Institute of High Energy Physics, Chinese Academy of Science, Beijing, China</td>
+          </tr>
+          <tr>
+            <td>09/2008 - 06/2012</td>
+            <td>The influence of vibration on the resonant cavity mirror of the particle movement<br>
+	      Infrared diode laser wavelength calibration<br>         
+              The dynamic evolution of newly born millisecond magnetar wind
+            <td>Central China Normal University, Wuhan, China</td>
+          </tr>
+          <tr class="w3-white">
+            <td>06/2011 - 10/2011</td>
+            <td>Laser frequency stabilization experiment based on LabVIEW</td>
+            <td>Institute of Physics and Mathematics, Chinese Academy of Science, Wuhan, China}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Third Grid: Swing By & Contact -->
+<div class="w3-row" id="contact">
+  <div class="w3-half w3-dark-grey w3-container w3-center" style="height:700px">
+    <div class="w3-padding-64">
+      <h1>On the Web</h1>
+    </div>
+    <div class="w3-padding-64">
+      <p class="view"><a href="http://github.com/saberyoung" target="tab" class="icon-github"> GitHub<br></a></li>
+      <p class="view"><a href="https://www.linkedin.com/in/sheng-yang-ba1736a4/" target="tab" id="sidebar-linkedin" class="icon-linkedin-sign"> LinkedIn</a></li>
+      <p class="view"><a href="https://twitter.com/saberyoung" target="tab" id="sidebar-github" class="icon-twitter-sign"> Twitter</a></li>
+      <p class="view"><a href="https://plus.google.com/105863138530575817269" target="tab" class="icon-google-plus-sign"> Google+></a></li>
+      <p class="view"><a href="https://www.facebook.com/profile.php?id=100008408708231" target="tab" class="icon-facebook"> Facebook</a></li>
+      <p class="view"><a href="http://www.renren.com/264276605" target="tab" class="icon-renren"> RenRen</a></li>
+      <p class="view"><a href="http://www.pd.astro.it/index.php/en/staff/postdoc-phd-etc/167-sheng-yang.html" target="tab" class="icon-expand">Oapd</a></li>
+      <p class="view"><a href="/wedding" target="tab" class="icon-sun">Wedding</a></li>
+    </div>
+  </div>
+  <div class="w3-half w3-teal w3-container" style="height:700px">
+    <div class="w3-padding-64 w3-padding-large">
+      <h1>Contact</h1>
+      <p class="w3-opacity">GET IN TOUCH</p>
+      <form class="w3-container w3-card-2 w3-padding-32 w3-white" action="/aboutme" method = "POST" target="_blank">
+        <div class="w3-section">
+          <label>Name</label>
+          <input class="w3-input" style="width:100%;" type="text" required name="Name">
+        </div>
+        <div class="w3-section">
+          <label>Email</label>
+          <input class="w3-input" style="width:100%;" type="text" required name="Email">
+        </div>
+        <div class="w3-section">
+          <label>Message</label>
+          <input class="w3-input" style="width:100%;" type="text" required name="Message">
+        </div>
+        <button type="submit" value="submit" class="w3-button w3-teal w3-right">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-black w3-padding-16">
+   <p>
+  <address>
+    <font color="#c0c0c0">
+      <big><b><em>
+	    Powered by <a href="mailto:sngyang@ucdavis.edu">Sheng Yang</a>.
+    </font>
+    </big></b></em>
+   </address></p>
+   
+</footer>
+
+</body>
+</html>
+{% endblock%}

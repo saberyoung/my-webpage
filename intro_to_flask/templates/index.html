@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DLT40</title>
+
+    <!-- Bootstrap -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- In-lining styles to avoid needing a separate .css file -->
+    <style>
+        hr { border-color: #cccccc; margin: 0; }
+        .no-margins { margin: 0px; }
+        .with-margins { margin: 10px; }
+        .col-centered { float: none; margin: 0 auto; }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+      <![endif]-->
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Tabulation example</title>
+
+    <style type="text/css">
+      dummydeclaration { padding-left: 4em; } /* Firefox ignores first declaration for some reason */
+      tab1 { padding-left: 4em; }
+      tab2 { padding-left: 8em; }
+      tab3 { padding-left: 12em; }
+      tab4 { padding-left: 16em; }
+      tab5 { padding-left: 20em; }
+      tab6 { padding-left: 24em; }
+      tab7 { padding-left: 28em; }
+      tab8 { padding-left: 32em; }
+      tab9 { padding-left: 36em; }
+      tab10 { padding-left: 40em; }
+      tab11 { padding-left: 44em; }
+      tab12 { padding-left: 48em; }
+      tab13 { padding-left: 52em; }
+      tab14 { padding-left: 56em; }
+      tab15 { padding-left: 60em; }
+      tab16 { padding-left: 64em; }
+
+        </style>
+    </head>
+    
+  <body background={{ url_for('static', filename='img/bkg.jpg')}}>
+
+    <object width="1000" height="200"
+	    classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+	    codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0">
+      <param name="SRC" value="bookmark.swf">
+      <embed src={{ url_for('static', filename='mov/bbh.mp4')}}></embed>
+    </object>
+
+    <tab6>
+      <img src={{ url_for('static', filename='img/id.jpg') }} width="300" height="400" />
+	  
+    <H1><b><em>
+    <font color="#0080ff">
+    <a href="/home" target="_top">
+      HomePage
+    </a></font>
+
+    <br> 
+    <font color="#00ff00">
+    Sheng Yang, PHD student at the University of Padova in the Department of Astronomy while joint PHD pragram in the observatory of Padova, worked with Enrico Capellarro and visiting sholar at UC Davis in the Department of Astronomy. My research interests lie in computer science techniques to the investigations of transients while I joined in Grawita project(Italy) and DLT40 project(US).
+    </font></H1></b></em>
+    
+    <br>    
+
+    <marquee bgcolor="white" behavior=left Scroll amount=5><font color="black">
+    Built with Flask. Unless otherwise noted, all content by Sheng Yang. 
+    </marquee></font>
+    
+    <address>
+      <font color="#c0c0c0">
+      <big><b><em>
+    Written by <a href="mailto:sngyang@ucdavis.edu">Sheng Yang</a>.<br> 
+    Visit me at: UC village, albany<br>
+    Box 578, CA<br>
+    USA
+      </font>
+    </big></b></em>
+    </address>
+    
+</body>
+</html>

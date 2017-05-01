@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="jumbo">
+    <h2>Welcome to Sheng Yang's webpage<h2>
+   {% if call_or_get(current_user.is_authenticated) %}
+        <p><h3><a> you are ready to go  </a></h3></p>
+    {% else %}
+       <p><h3><a href={{ url_for('user.login') }}> sign in</a></h3></p>
+    {% endif %}
+  </div>
+{% endblock %}

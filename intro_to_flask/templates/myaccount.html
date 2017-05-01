@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+{% block content %}
+<head>
+<style>
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+    border-radius: 5px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+.container {
+    padding: 2px 16px;
+}
+</style>
+</head>
+<body>
+
+  {% with name = inlist[0]['username'] %}
+  {% with gender = inlist[0]['gender'] %}
+  {% with phone = inlist[0]['phone'] %}
+  {% with email = inlist[0]['email'] %}
+  {% with year = inlist[0]['year'] %}
+  {% with month = inlist[0]['month'] %}
+  {% with day = inlist[0]['day'] %}
+  {% with work = inlist[0]['work'] %}
+  {% with location = inlist[0]['location'] %}
+  {% with zipcode = inlist[0]['zipcode'] %}
+  <h2> {{name}}</h2>
+
+<div class="card">
+  <img src={{ url_for('static', filename='img/nopic2.jpg') }} alt="Avatar" style="width:100%">
+  <div class="container">
+      <table border = 1>
+      <tr>
+	<th>name</th>
+        <td>  {{name}} </td>
+      </tr>
+      <tr>
+	<th>gender</th>
+        <td>  {{gender}} </td>
+      </tr>
+      <tr>
+	<th>phone</th>
+        <td>  {{phone}} </td>
+      </tr>
+      <tr>
+	<th>email</th>
+        <td>  {{email}} </td>
+      </tr>
+      <tr>
+	<th>year</th>
+        <td>  {{year}} </td>
+      </tr>
+      <tr>
+	<th>month</th>
+        <td>  {{month}} </td>
+      </tr>
+      <tr>
+	<th>day</th>
+        <td>  {{day}} </td>
+      </tr>
+      <tr>
+	<th>work</th>
+        <td>  {{work}} </td>
+      </tr>
+      <tr>
+	<th>location</th>
+        <td>  {{location}} </td>
+      </tr>
+      <tr>
+	<th>zipcode</th>
+        <td>  {{zipcode}} </td>
+      </tr>
+      <a href="/info" target="_top">modify?</a> 
+  </div>
+</div>
+
+{% endwith%}
+{% endwith%}
+{% endwith%}
+{% endwith%}
+{% endwith%}
+{% endwith%}
+{% endwith%}
+{% endwith%}
+{% endwith%}
+{% endwith%}
+</body>
+{% endblock %}

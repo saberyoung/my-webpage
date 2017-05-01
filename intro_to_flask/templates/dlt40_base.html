@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% block content %}
+<html lang="en">
+  <head>
+    <style type="text/css">
+      dummydeclaration { padding-left: 4em; } /* Firefox ignores first declaration for some reason */
+      tab1 { padding-left: 4em; }
+      tab2 { padding-left: 8em; }
+      tab3 { padding-left: 12em; }
+      tab4 { padding-left: 16em; }
+      tab5 { padding-left: 20em; }
+      tab6 { padding-left: 24em; }
+      tab7 { padding-left: 28em; }
+      tab8 { padding-left: 32em; }
+      tab9 { padding-left: 36em; }
+      tab10 { padding-left: 40em; }
+      tab11 { padding-left: 44em; }
+      tab12 { padding-left: 48em; }
+      tab13 { padding-left: 52em; }
+      tab14 { padding-left: 56em; }
+      tab15 { padding-left: 60em; }
+      tab16 { padding-left: 64em; }
+
+        </style>
+  </head>
+  
+  <body>
+
+    <h7>dlt40 ligo project triggered the following LVC triggers already:<br><br>
+      G268556 2017-01-04 14:35:34 UTC, 50%mass 99%region 40Mpc<br>
+      <tab1>18 galaxies selected, 2457759-2457766<br>
+      <tab1>no gcn sent<br>
+      G270580 2017-01-20 12:33:16 UTC, 99%mass 99%region 15Mpc<br>
+      <tab1>33 galaxies selected and 25 observed, 2457774-2457796<br>
+      <tab1>gcn sent <br>
+      G274296 2017-02-17 18:00:33 UTC, 99%mass 80%region 40Mpc<br>
+      <tab1>46 galaxies selected and 25 observed, 2457802-2457825<br>
+      <tab1>gcn ready<br>
+      G275404 2017-02-25 18:30:51 UTC, 50%mass 80%region 40Mpc<br>
+      <tab1>50 galaxies selected and 50 observed, 2457815-2457821<br>
+      <tab1>85 galaxies selected and 84 observed, 2457821-2457825<br>
+      <tab1>gcn ready<br>
+      G275697 2017-02-27 18:58:03 UTC, 90%mass 80%region 40Mpc,<br>
+      <tab1>59 galaxies selected and 59 observed, 2457812-2457820<br>
+      <tab1>114 galaxies selected and 114 observed, 2457820-2457825<br>
+      <tab1>gcn ready<br>
+      G277583 2017-03-13 22:43:01 UTC, 80%mass 80%region 40Mpc,<br>
+      <tab1>112 galaxies selected and 55 observed,<br>
+    </h7>
+
+
+<br>
+</br>
+{% for tt in tlist %}
+<a href="https://gracedb.ligo.org/events/view/{{tt}}" >
+  <h7><img src={{ url_for('static', filename='img/dlt40/'+tt+'.png') }} width="500" height="440" /></h7> </a>
+<tab10>
+<a href="{{ url_for('dltshow', trigger=tt) }}">
+  <h4>{{tt}}</h4></a>
+     </br>
+     {% endfor %}
+     <a href="/home" target="_top">back</a> 
+    
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% block content %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DLT40</title>
+
+    <!-- Bootstrap -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- In-lining styles to avoid needing a separate .css file -->
+    <style>
+        hr { border-color: #cccccc; margin: 0; }
+        .no-margins { margin: 0px; }
+        .with-margins { margin: 10px; }
+        .col-centered { float: none; margin: 0 auto; }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+      <![endif]-->
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Tabulation example</title>
+
+    <style type="text/css">
+      dummydeclaration { padding-left: 4em; } /* Firefox ignores first declaration for some reason */
+      tab1 { padding-left: 4em; }
+      tab2 { padding-left: 8em; }
+      tab3 { padding-left: 12em; }
+      tab4 { padding-left: 16em; }
+      tab5 { padding-left: 20em; }
+      tab6 { padding-left: 24em; }
+      tab7 { padding-left: 28em; }
+      tab8 { padding-left: 32em; }
+      tab9 { padding-left: 36em; }
+      tab10 { padding-left: 40em; }
+      tab11 { padding-left: 44em; }
+      tab12 { padding-left: 48em; }
+      tab13 { padding-left: 52em; }
+      tab14 { padding-left: 56em; }
+      tab15 { padding-left: 60em; }
+      tab16 { padding-left: 64em; }
+
+        </style>
+  </head>
+  
+  <body>
+    <H1>
+    Grawita page
+    </H1>
+    </br>
+    {% for trigger in piclist.keys() %}
+    <a href="/grawita/G{{trigger}}">
+      <h1>G{{trigger}}</h1> </a>
+     </br>
+     {% endfor %}
+     
+     <H1>Help recognise the candidates.<br><br>You can help us recognise candidates.(<a href="/grawita/readme" target="_top">User Manual)</a>
+     </H1>
+     <a href="/home" target="_top">back</a>
+     
+</body>
+</html>
+{% endblock %}

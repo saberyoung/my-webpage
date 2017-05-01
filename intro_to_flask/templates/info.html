@@ -1,0 +1,189 @@
+{% extends "layout.html" %}
+{% block content %}
+<head>
+   <style type="text/css">
+fieldset.date { 
+  margin: 0; 
+  padding: 0; 
+  padding-left: 20px; 
+  padding-bottom: .5em; 
+  display: block; 
+  border: none; 
+} 
+
+fieldset.date legend { 
+  margin: 0; 
+  padding: 0; 
+  margin-top: .25em; 
+  font-size: 100%; 
+} 
+
+
+fieldset.date label { 
+  position: absolute; 
+  top: -20em; 
+  left: -200em; 
+} 
+
+fieldset.date select { 
+margin: 0; 
+padding: 0; 
+font-size: 100%; 
+display: inline; 
+} 
+
+span.inst { 
+  font-size: 75%; 
+  color: blue; 
+  padding-left: .25em; 
+} 
+
+
+fieldset.date select:active, 
+fieldset.date select:focus, 
+fieldset.date select:hover 
+{ 
+  border-color: gray; 
+  background-color: lightyellow; 
+} 
+
+   </style>
+</head>
+
+<body>
+  <h1> {{name}}</h1>
+
+  <div>
+    <form action = "/myaccount" method = "POST">
+      <img src={{ url_for('static', filename='img/nopic2.jpg') }} alt="Avatar" style="width:30%">
+
+      <label for="pic"></label>
+      <a href="javascript:;">
+	<input type="file" name="pic" id="pic">
+      </a>
+      
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+      <label for="country">Country</label>
+      <select id="country" name="country">
+	<option value="australia">Australia</option>
+	<option value="canada">Canada</option>
+	<option value="usa">USA</option>
+      </select>
+
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender">
+	<option value="male">male</option>
+	<option value="female">female</option>
+      </select>
+
+      <label for="telephone">telephone</label>
+      <input type="text" id="telephone" name="telephone" placeholder="Your telephone..">
+
+      <label for="email">E-mail</label>
+      <input type="text" id="email" name="email" placeholder="Your email..">
+      <fieldset class="date"> 
+	<legend>Birthday </legend> 
+	<label for="month_start">Month</label> 
+	<select id="month_start" 
+		name="month_start" /> 
+	<option>January</option>       
+	<option>February</option>       
+	<option>March</option>       
+	<option>April</option>       
+	<option>May</option>       
+	<option>June</option>       
+	<option>July</option>       
+	<option>August</option>       
+	<option>September</option>       
+	<option>October</option>       
+	<option>November</option>       
+	<option>December</option>       
+  </select> - 
+  <label for="day_start">Day</label> 
+  <select id="day_start" 
+          name="day_start" /> 
+    <option>1</option>       
+    <option>2</option>       
+    <option>3</option>       
+    <option>4</option>       
+    <option>5</option>       
+    <option>6</option>       
+    <option>7</option>       
+    <option>8</option>       
+    <option>9</option>       
+    <option>10</option>       
+    <option>11</option>       
+    <option>12</option>       
+    <option>13</option>       
+    <option>14</option>       
+    <option>15</option>       
+    <option>16</option>       
+    <option>17</option>       
+    <option>18</option>       
+    <option>19</option>       
+    <option>20</option>       
+    <option>21</option>       
+    <option>22</option>       
+    <option>23</option>       
+    <option>24</option>       
+    <option>25</option>       
+    <option>26</option>       
+    <option>27</option>       
+    <option>28</option>       
+    <option>29</option>       
+    <option>30</option>       
+    <option>31</option>       
+  </select> - 
+  <label for="year_start">Year</label> 
+  <select id="year_start" 
+          name="year_start" />
+  	<option value="1990">1990</option>
+	<option value="1991">1991</option>
+	<option value="1992">1992</option>
+	<option value="1993">1993</option>
+	<option value="1994">1994</option>
+	<option value="1995">1995</option>
+	<option value="1996">1996</option>
+	<option value="1997">1997</option>
+	<option value="1998">1998</option>
+	<option value="1999">1999</option>
+	<option value="2000">2000</option>
+	<option value="2001">2001</option>
+	<option value="2002">2002</option>
+	<option value="2003">2003</option>
+	<option value="2004">2004</option>
+	<option value="2005">2005</option>
+	<option value="2006">2006</option>
+	<option value="2007">2007</option>
+	<option value="2008">2008</option>
+	<option value="2009">2009</option>
+  </select> 
+  <span class="inst">(Month-Day-Year)</span> 
+</fieldset>
+</label>
+
+      <label for="work">work</label>
+      <select id="work" name="work">
+	<option value="Astronomy">Astronomy</option>
+	<option value="Art">Art</option>
+	<option value="Education">Education</option>
+	<option value="IT">IT</option>
+	<option value="statistics">statistics</option>
+	<option value="math">Math</option>
+	<option value="physics">physics</option>
+      </select>
+
+      <label for="location">location</label>
+      <input type="text" id="location" name="location" placeholder="Your location.."><input type="text" id="zipcode" name="zipcode" placeholder="Your zipcode..">
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  
+</body>
+{% endblock %}
