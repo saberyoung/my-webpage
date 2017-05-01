@@ -3,7 +3,7 @@
 
 A [Kenneth Reitz](http://kennethreitz.org/) Project.
 
-![ice cream](https://thumbs.dreamstime.com/z/supernova-heart-nebula-shape-planets-stars-60306991.jpg)
+![ice cream](https://sd.keepcalm-o-matic.co.uk/i/keep-calm-and-love-astronomy-65.png)
 
 See http://httpbin.org for more information.
 
