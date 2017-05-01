@@ -14,10 +14,10 @@ import random
 import pylab as plt
 import sqlconn,util
 from datetime import datetime, timedelta
-from intro_to_flask import app
+from intro_to_flask import app, models, function
 from intro_to_flask.forms import ContactForm, SignupForm, SigninForm
 from flask_mail import Message,Mail
-from intro_to_flask.models import db, User2, User
+from intro_to_flask.models import db, User, User2
 from flask import jsonify
 from sqlalchemy import func
 from flask_user import login_required, UserManager, UserMixin, SQLAlchemyAdapter
@@ -29,28 +29,6 @@ from bokeh.models import Range1d
 from bokeh.models import HoverTool, BoxSelectTool, BoxZoomTool, ResizeTool, ResetTool
 from bokeh.embed import file_html, components
 import subprocess
-
-def mkdir(dir):
-    if os.path.exists(dir):pass
-    else:os.system('mkdir '+dir)
-
-def copy(cfileb,cfilea,dir):
-    if os.path.exists(dir+cfilea):pass
-    else:os.system('cp '+cfileb+' '+dir+cfilea)
-
-def db_create(trigger,username):
-    if username:
-        dbname="GW_"+str(trigger)+"_"+str(username)
-    else:
-        import random
-        dbname="GW_"+str(trigger)+"_"+str(random.randint(0,999))
-    command = ["CREATE TABLE `"+str(dbname)+"` (`id` int(11) unsigned NOT NULL AUTO_INCREMENT,`triggername` text,`number` int(11) DEFAULT NULL,`SN` int(11) DEFAULT NULL,`NSN` int(11) DEFAULT NULL,`other` text, PRIMARY KEY (`id`)) ENGINE=InnoDB AUTO_INCREMENT=124 DEFAULT CHARSET=latin1"]
-    try:
-        sqlconn.query(command,sqlconn.conn)
-        return dbname
-    except:
-        print "Table gcn_"+str(ligoid)+" already exists, insert directly!"
-        return False
 
 mail = Mail()
 
@@ -187,13 +165,13 @@ def showall_1():
     for tt in glob.glob('/Users/sheng.yang/ownCloud/grawita/gw_sy/plot_*'):
         triggerlist.append(re.search(r'plot_\w\w\w\w\w\w*',str(tt)).group(0)[-6:])
     for tt in triggerlist:
-        mkdir('intro_to_flask/static/img/grawita/')
-        mkdir('intro_to_flask/static/img/grawita/'+tt)
+        function.mkdir('intro_to_flask/static/img/grawita/')
+        function.mkdir('intro_to_flask/static/img/grawita/'+tt)
         piclist[tt]=[]
         picfiles=glob.glob('/Users/sheng.yang/ownCloud/grawita/gw_sy/plot_'+tt+'/test_img/*png')
         for pic in picfiles:
             piclist[tt].append(os.path.basename(pic))
-            copy(pic,os.path.basename(pic),'intro_to_flask/static/img/grawita/'+tt+'/')
+            function.copy(pic,os.path.basename(pic),'intro_to_flask/static/img/grawita/'+tt+'/')
     return piclist
 
 piclist=showall_1()
@@ -223,7 +201,7 @@ def gwshow_trigger(trig,num):
             command = ['select username from users where id='+str(session['user_id'])]
             data = sqlconn.query(command,sqlconn.conn)
             username=data[0]['username']
-            dbname=db_create(str(trig),username)
+            dbname=function.db_create(str(trig),username)
         result = request.form
         no,nsn,nnsn='',0,0
         try:
