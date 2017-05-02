@@ -6,3 +6,7 @@ api_version: 1
 handlers:
 - url: .*
   script: app.py
+
+libraries:
+- name: numpy
+  version: "1.6.1"

@@ -11,7 +11,7 @@ import time
 import string
 import re
 import random
-import pylab as plt
+#import pylab as plt
 import sqlconn,util
 from datetime import datetime, timedelta
 from intro_to_flask import app, models, function
