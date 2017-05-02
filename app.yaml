@@ -1,0 +1,11 @@
+application: syang-web
+version: 1
+runtime: python
+api_version: 1
+
+handlers: 
+- url: /intro_to_flask/
+  static_dir: static
+
+- url: /.*
+  script: runserve.py
