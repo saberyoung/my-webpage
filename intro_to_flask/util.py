@@ -14,11 +14,11 @@ elif 'physics.ucdavis' in host:
    execdirectory = '/Users/valenti/bin/'
    rawdata = '/archive/engineering/'
    realpass = 'configure'
-elif 'ucdavis.edu' in host or host in ['pluto.local','airbears2-10-142-137-9.airbears2.1918.berkeley.edu']:
+elif 'ucdavis.edu' in host or host in ['pluto.local','airbears2-10-142-137-9.airbears2.1918.berkeley.edu','localhost:8080']:
    host = 'syang'
-   workingdirectory = '/Users/sheng.yang/mysql/'
-   execdirectory = '/Users/sheng.yang/mysql/'
-   rawdata = '/Users/sheng.yang/mysql/'
+   workingdirectory = '/'
+   execdirectory = '/'
+   rawdata = '/'
    realpass = 'configure'
 else:
    sys.exit('system '+str(host)+' not recognize')
