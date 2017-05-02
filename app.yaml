@@ -2,17 +2,7 @@ application: syang-web
 version: 1
 runtime: python
 api_version: 1
-threadsafe: yes
 
 handlers:
-- url: /intro_to_flask/static
-  static_dir: static
-
 - url: .*
   script: runserve.py
-
-libraries:
-- name: jinja2
-  version: "2.6"
-- name: markupsafe
-  version: "0.15"
